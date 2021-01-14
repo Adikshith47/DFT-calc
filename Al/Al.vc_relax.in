@@ -1,0 +1,37 @@
+&control
+	calculation = 'vc-relax'
+	outdir = './outdir/'
+	pseudo_dir = '/home/adikshith/qe-6.4.1/pslibrary.1.0.0/pbe/PSEUDOPOTENTIALS'
+	etot_conv_thr = 1e-6
+	forc_conv_thr = 1e-5
+	prefix = 'Al'
+	tstress = .true.
+	tprnfor = .true.
+/
+&system
+	ibrav = 2, celldm(1) = 10.00
+	nat = 1, ntyp = 1,
+	occupations = 'smearing',
+	degauss = 0.02,
+	smearing = 'mv',
+	ecutwfc = 30
+/
+&electrons
+	conv_thr = 1e-6,
+	mixing_beta = 0.7
+/
+&ions
+	ion_dynamics = 'bfgs'
+/
+&cell
+	cell_dofree = 'all'
+/
+ATOMIC_SPECIES
+Al 26.9085 Al.pbe-n-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (alat)
+Al 0.00 0.00 0.00
+
+K_POINTS (automatic)
+6 6 6 0 0 0
+
