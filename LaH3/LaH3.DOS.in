@@ -1,0 +1,7 @@
+&DOS
+	outdir = './outdir/'
+	prefix = 'LaH3'
+	fildos = 'LaH3.dos.dat'
+	emin = -31
+	emax = 18
+/

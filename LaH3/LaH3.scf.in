@@ -1,0 +1,32 @@
+&control
+	calculation = 'scf'
+	outdir = './outdir/'
+	prefix = 'LaH3'
+	etot_conv_thr = 1e-6
+	pseudo_dir = '/home/adikshith/qe-6.4.1/pslibrary.1.0.0/pbe/PSEUDOPOTENTIALS'
+/
+&system
+	ibrav = 2, celldm(1) = 10.5964,
+	nat = 3, ntyp = 2,
+	ecutwfc = 40,
+	occupations = 'smearing',
+	smearing = 'mv',
+	 nbnd = 23
+	degauss = 0.01
+/
+&electrons
+	conv_thr = 1e-5
+	mixing_beta = 0.7
+/
+
+ATOMIC_SPECIES
+ La 57.078 La.pbe-spdfn-kjpaw_psl.1.0.0.UPF
+ H 1.000 H.pbe-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (alat)
+ La 0.00 0.00 0.00 0 0 0
+ H 0.25 0.25 0.25 1 1 1
+ H 0.50 0.00 0.00 1 1 1
+
+K_POINTS (automatic)
+ 8 8 8 0 0 0

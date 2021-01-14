@@ -1,0 +1,38 @@
+&control
+	calculation = 'bands'
+	restart_mode = 'from_scratch'
+	verbosity = 'high'
+	outdir = './outdir/'
+	prefix = 'LaH3'
+	etot_conv_thr = 1e-6
+	pseudo_dir = '/home/adikshith/qe-6.4.1/pslibrary.1.0.0/pbe/PSEUDOPOTENTIALS'
+/
+&system
+	ibrav = 2, celldm(1) = 10.7051,
+	nat = 3, ntyp = 2,
+	ecutwfc = 40,
+	nbnd = 23
+/
+&electrons
+	conv_thr = 1e-6
+	mixing_beta = 0.7
+/
+
+ATOMIC_SPECIES
+ La 57.078 La.pbe-spdfn-kjpaw_psl.1.0.0.UPF
+ H 1.000 H.pbe-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS (alat)
+ La 0.00 0.00 0.00 
+ H 0.25 0.25 0.25 
+ H 0.50 0.00 0.00
+
+K_POINTS {crystal_b}
+6 
+   0.5000000000     0.5000000000     0.0000000000 20 !X
+   0.0000000000     0.0000000000     0.0000000000 20 !GAMMA
+   0.0000000000     0.5000000000     0.0000000000 20 !L
+   0.5000000000     0.7500000000     0.2500000000 10 !W
+   0.3750000000     0.7500000000     0.3750000000 30 !K
+   0.0000000000     0.0000000000     0.0000000000 10 !GAMMA
+  

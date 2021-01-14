@@ -1,0 +1,5 @@
+&bands
+	outdir = './outdir/'
+	prefix = 'LaH3'
+	filband = 'LaH3.bands.dat'
+/
